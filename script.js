@@ -12,5 +12,5 @@ function dropShoe(){
     screen.style.display = "flex";
 
     shoe.style.animation =
-        "fall 2s forwards";
+        shoe.style.top="40%;
 }
