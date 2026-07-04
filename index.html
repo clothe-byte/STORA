@@ -1,88 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STORA</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Intro -->
+    <!-- INTRO -->
     <div class="intro">
         <h1>STORA</h1>
     </div>
 
-    <!-- Navbar -->
+    <!-- NAVBAR -->
     <nav>
         <div class="logo">STORA</div>
+
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Shoes</a></li>
+            <li><a href="#products">Shoes</a></li>
             <li><a href="#">Watches</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- HERO -->
     <section class="hero">
         <h1>MOVE WITH STYLE</h1>
         <p>Premium Shoes & Watches</p>
         <button>Explore Now</button>
     </section>
-<!-- Shoes Section -->
-<section class="products">
-    <h2>Premium Shoes</h2>
-    <div class="cards">
-        <div class="samba-card" onclick="dropShoe()">
-    <img src="Samba.png" class="samba-img">
-    <h3>ADIDAS SAMBA</h3>
-    <p>Click to Experience</p>
-</div>
 
-        <div class="card">
-            <h3>Coming soon</h3>
-            <p>Performance Collection</p>
+    <!-- PRODUCTS -->
+    <section class="products" id="products">
+
+        <h2>Premium Shoes</h2>
+
+        <div class="cards">
+
+            <!-- ADIDAS SAMBA -->
+            <div class="samba-card" onclick="dropShoe()">
+
+                <img
+                    src="ChatGPT Image Jul 4, 2026 at 06_11_16 PM.png"
+                    class="samba-img"
+                    alt="Adidas Samba">
+
+                <h3>ADIDAS SAMBA</h3>
+
+                <p>Click to Experience</p>
+
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card">
+                <h3>Coming Soon</h3>
+                <p>Performance Collection</p>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="card">
+                <h3>STORA Elite</h3>
+                <p>Premium Edition</p>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3>STORA Elite</h3>
-            <p>Premium Edition</p>
-        </div>
-    </div>
-</section>
+    </section>
+
+    <!-- ABOUT -->
     <section class="about">
-    <h2>About STORA</h2>
-    <p>
-        STORA is a premium fashion brand focused on luxury footwear and watches.
-        Our mission is to combine style, quality, and innovation to create a unique experience.
-    </p>
-        <section class="contact">
-    <h2>Contact STORA</h2>
-    <p>Email: support@stora.com</p>
-    <p>Instagram: @storaofficial</p>
-</section>
-        <footer>
-    <h3>STORA</h3>
-    <p>Premium Shoes & Watches</p>
-    <p>© 2026 STORA. All Rights Reserved.</p>
-            <div id="popup" class="popup">
-    <div class="popup-content">
-        <h2>⌚ Coming Soon</h2>
-        <p>Our luxury watch collection is launching soon.</p>
-        <button onclick="closePopup()">Close</button>
-    </div>
-</div></footer></section></section><script src="script.js"></script>
+
+        <h2>About STORA</h2>
+
+        <p>
+            STORA is a premium fashion brand focused on luxury footwear
+            and watches. Our mission is to combine style,
+            quality and innovation.
+        </p>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <h2>Contact STORA</h2>
+
+        <p>Email: support@stora.com</p>
+
+        <p>Instagram: @storaofficial</p>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>STORA</h3>
+
+        <p>Premium Shoes & Watches</p>
+
+        <p>© 2026 STORA. All Rights Reserved.</p>
+
+    </footer>
+
+    <!-- SHOE DROP SCREEN -->
     <div id="dropScreen" class="drop-screen">
 
-    <div class="splash"></div>
+        <div class="splash"></div>
 
-    <img
-        src="Samba.png"
-        id="fallingShoe"
-        class="falling-shoe"
-    >
+        <img
+            src="ChatGPT Image Jul 4, 2026 at 06_11_16 PM.png"
+            id="fallingShoe"
+            class="falling-shoe"
+            alt="Adidas Samba">
 
-</div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+
 </body>
+
 </html>
