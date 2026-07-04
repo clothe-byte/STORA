@@ -1,127 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STORA</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STORA</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- INTRO -->
-    <div class="intro">
-        <h1>STORA</h1>
-    </div>
+<div class="intro">
+    <h1>STORA</h1>
+</div>
 
-    <!-- NAVBAR -->
-    <nav>
-        <div class="logo">STORA</div>
+<nav>
+    <div class="logo">STORA</div>
 
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#products">Shoes</a></li>
-            <li><a href="#">Watches</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#products">Shoes</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h1>MOVE WITH STYLE</h1>
-        <p>Premium Shoes & Watches</p>
-        <button>Explore Now</button>
-    </section>
+<section class="hero">
+    <h1>MOVE WITH STYLE</h1>
+    <p>Premium Shoes & Watches</p>
+    <button>Explore Now</button>
+</section>
 
-    <!-- PRODUCTS -->
-    <section class="products" id="products">
+<section class="products" id="products">
 
-        <h2>Premium Shoes</h2>
+    <h2>Premium Shoes</h2>
 
-        <div class="cards">
+    <div class="cards">
 
-            <!-- ADIDAS SAMBA -->
-            <div class="samba-card" onclick="dropShoe()">
+        <div class="samba-card"
+             onclick="dropShoe()">
 
-                <img
-                    src="ChatGPT Image Jul 4, 2026 at 06_11_16 PM.png"
-                    class="samba-img"
-                    alt="Adidas Samba">
+            <img
+                src="samba.png"
+                class="samba-img">
 
-                <h3>ADIDAS SAMBA</h3>
+            <h3>ADIDAS SAMBA</h3>
 
-                <p>Click to Experience</p>
-
-            </div>
-
-            <!-- CARD 2 -->
-            <div class="card">
-                <h3>Coming Soon</h3>
-                <p>Performance Collection</p>
-            </div>
-
-            <!-- CARD 3 -->
-            <div class="card">
-                <h3>STORA Elite</h3>
-                <p>Premium Edition</p>
-            </div>
+            <p>Click to Experience</p>
 
         </div>
 
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about">
-
-        <h2>About STORA</h2>
-
-        <p>
-            STORA is a premium fashion brand focused on luxury footwear
-            and watches. Our mission is to combine style,
-            quality and innovation.
-        </p>
-
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-
-        <h2>Contact STORA</h2>
-
-        <p>Email: support@stora.com</p>
-
-        <p>Instagram: @storaofficial</p>
-
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-
-        <h3>STORA</h3>
-
-        <p>Premium Shoes & Watches</p>
-
-        <p>© 2026 STORA. All Rights Reserved.</p>
-
-    </footer>
-
-    <!-- SHOE DROP SCREEN -->
-    <div id="dropScreen" class="drop-screen">
-
-        <div class="splash"></div>
-
-        <img
-            src="ChatGPT Image Jul 4, 2026 at 06_11_16 PM.png"
-            id="fallingShoe"
-            class="falling-shoe"
-            alt="Adidas Samba">
-
     </div>
 
-    <!-- SCRIPT -->
-    <script src="script.js"></script>
+</section>
+
+<section class="about">
+
+    <h2>About STORA</h2>
+
+    <p>
+        STORA is a premium luxury
+        footwear brand.
+    </p>
+
+</section>
+
+<section
+    class="contact"
+    id="contact">
+
+    <h2>Contact</h2>
+
+    <p>support@stora.com</p>
+
+</section>
+
+<footer>
+
+    <h3>STORA</h3>
+
+    <p>© 2026</p>
+
+</footer>
+
+<div
+    id="dropScreen"
+    class="drop-screen">
+
+    <div class="splash"></div>
+
+    <img
+        src="samba.png"
+        id="fallingShoe"
+        class="falling-shoe">
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
