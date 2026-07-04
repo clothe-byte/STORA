@@ -1,26 +1,22 @@
 window.onload = function () {
     document.body.style.scrollBehavior = "smooth";
 };
-
 function dropShoe() {
+
+    alert("dropShoe started");
 
     const screen = document.getElementById("dropScreen");
     const shoe = document.getElementById("fallingShoe");
     const splash = document.querySelector(".splash");
 
-    // Screen show
     screen.style.display = "flex";
 
-    // Animation reset
-    shoe.style.animation = "none";
-    splash.style.animation = "none";
-
-    // Force refresh
-    shoe.offsetHeight;
-
-    // Start shoe fall
     shoe.style.animation = "fall 2s forwards";
+}
 
+
+    /
+    
     // Splash after 1.5 sec
     setTimeout(() => {
         splash.style.animation =
