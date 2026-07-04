@@ -1,6 +1,6 @@
-        // ====================
+// =====================
 // STORA SCRIPT
-// ====================
+// =====================
 
 window.onload = function () {
     document.documentElement.style.scrollBehavior = "smooth";
@@ -9,60 +9,82 @@ window.onload = function () {
 function dropShoe() {
 
     const screen =
-        document.getElementById("dropScreen");
+        document.getElementById(
+            "dropScreen"
+        );
 
     const shoe =
-        document.getElementById("fallingShoe");
+        document.getElementById(
+            "fallingShoe"
+        );
 
     const splash =
-        document.querySelector(".splash");
+        document.querySelector(
+            ".splash"
+        );
 
-    // Show screen
-    screen.style.display = "flex";
+    // Show animation screen
+    screen.style.display = "block";
 
     // Remove old button
     const oldBtn =
-        document.getElementById("buyBtn");
+        document.getElementById(
+            "buyBtn"
+        );
 
     if (oldBtn)
         oldBtn.remove();
 
-    // Reset
-    shoe.style.animation = "none";
-    splash.style.animation = "none";
-    shoe.style.transition = "none";
+    // Reset everything
+    shoe.style.transition =
+        "none";
 
-    shoe.style.left = "50%";
-    shoe.style.top = "-500px";
+    shoe.style.animation =
+        "none";
+
+    splash.style.animation =
+        "none";
+
+    shoe.style.left =
+        "50%";
+
+    shoe.style.top =
+        "-500px";
 
     shoe.style.transform =
         "translateX(-50%) rotate(0deg)";
+
+    splash.style.transform =
+        "translateX(-50%) scale(0)";
 
     void shoe.offsetWidth;
 
     // ==================
     // FALL
     // ==================
+
     shoe.style.animation =
         "fall 2s forwards";
 
     // ==================
     // SPLASH
     // ==================
+
     setTimeout(() => {
 
         splash.style.animation =
-            "splashEffect .7s forwards";
+            "splash .7s forwards";
 
     }, 1500);
 
     // ==================
     // TAP 1
     // ==================
+
     setTimeout(() => {
 
         shoe.style.transition =
-            ".25s";
+            ".2s";
 
         shoe.style.transform =
             "translateX(-50%) rotate(30deg)";
@@ -72,30 +94,32 @@ function dropShoe() {
     // ==================
     // TAP 2
     // ==================
+
     setTimeout(() => {
 
         shoe.style.transform =
             "translateX(-50%) rotate(10deg)";
 
-    }, 2500);
+    }, 2400);
 
     setTimeout(() => {
 
         shoe.style.transform =
             "translateX(-50%) rotate(30deg)";
 
-    }, 2800);
+    }, 2600);
 
     setTimeout(() => {
 
         shoe.style.transform =
             "translateX(-50%) rotate(10deg)";
 
-    }, 3100);
+    }, 2800);
 
     // ==================
-    // LEFT SLIDE
+    // SLIDE LEFT
     // ==================
+
     setTimeout(() => {
 
         shoe.style.transition =
@@ -104,11 +128,12 @@ function dropShoe() {
         shoe.style.left =
             "-30%";
 
-    }, 3600);
+    }, 3400);
 
     // ==================
-    // COME FROM RIGHT
+    // RETURN RIGHT
     // ==================
+
     setTimeout(() => {
 
         shoe.style.transition =
@@ -125,15 +150,18 @@ function dropShoe() {
         shoe.style.left =
             "50%";
 
-    }, 5000);
+    }, 4700);
 
     // ==================
-    // BUTTON
+    // SHOW BUTTON
     // ==================
+
     setTimeout(() => {
 
         const btn =
-            document.createElement("button");
+            document.createElement(
+                "button"
+            );
 
         btn.id =
             "buyBtn";
@@ -141,8 +169,9 @@ function dropShoe() {
         btn.innerHTML =
             "EXPLORE COLLECTION";
 
-        screen.appendChild(btn);
+        screen.appendChild(
+            btn
+        );
 
-    }, 6200);
-
+    }, 6000);
 }
