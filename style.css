@@ -66,7 +66,13 @@ nav ul li a{
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(to bottom,#000,#111);
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1542291026-7eec264c27ff');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    text-align:center;
 }
 
 .hero h1{
