@@ -3,11 +3,14 @@ window.onload = function(){
 };
 function dropShoe(){
 
-    const screen = document.getElementById("dropScreen");
-    const shoe = document.getElementById("fallingShoe");
+    const screen =
+        document.getElementById("dropScreen");
+
+    const shoe =
+        document.getElementById("fallingShoe");
 
     screen.style.display = "flex";
 
-    shoe.style.animation = "fall 2s forwards";
-
+    shoe.style.animation =
+        "fall 2s forwards";
 }
