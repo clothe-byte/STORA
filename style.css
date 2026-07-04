@@ -156,3 +156,18 @@ button:hover{
     line-height:1.8;
     color:#ccc;
 }
+footer{
+    background:#111;
+    padding:50px;
+    text-align:center;
+}
+
+footer h3{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#999;
+    margin:10px 0;
+}
