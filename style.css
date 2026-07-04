@@ -309,7 +309,8 @@ footer p{
     position:absolute;
     width:320px;
     top:-500px;
-    left:40%;
+    left:50%;
+    transform:translateX(-50%);
     transform-origin:bottom center;
 }
 
