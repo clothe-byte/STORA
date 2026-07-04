@@ -204,6 +204,24 @@ footer p{
     to{
         transform:scale(1);
         opacity:1;
+.contact{
+    padding:100px 30px;
+    text-align:center;
+    background:#111;
+}
+
+.contact h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.contact p{
+    font-size:1.1rem;
+    margin:10px 0;
+    color:#ccc;
+}        
+        
+        
     }
 }
 }
