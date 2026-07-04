@@ -1,1 +1,3 @@
-console.log("STORA website loaded successfully");
+window.onload = function(){
+    document.body.style.scrollBehavior = "smooth";
+};
