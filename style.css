@@ -2,28 +2,32 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
     background:#000;
     color:#fff;
     overflow-x:hidden;
-    html{
-    scroll-behavior: smooth;
-}
 }
 
-/* Intro */
+/* INTRO */
+
 .intro{
     position:fixed;
+    top:0;
+    left:0;
     width:100%;
     height:100vh;
     background:#000;
     display:flex;
     justify-content:center;
     align-items:center;
-    z-index:999;
+    z-index:9999;
     animation:fadeOut 2s forwards;
     animation-delay:2s;
 }
@@ -32,76 +36,6 @@ body{
     font-size:6rem;
     letter-spacing:15px;
     animation:zoom 2s ease;
-}
-
-/* Navbar */
-nav{
-    position:fixed;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    padding:25px 50px;
-    background:rgba(0,0,0,0.4);
-    backdrop-filter:blur(10px);
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-}
-
-nav ul li{
-    margin-left:30px;
-}
-
-nav ul li a{
-    color:white;
-    text-decoration:none;
-}
-
-/* Hero */
-.hero{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background:
-    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
-    url('https://images.unsplash.com/photo-1542291026-7eec264c27ff');
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-    text-align:center;
-}
-
-.hero h1{
-    
-    
-    font-size:5rem;
-    letter-spacing:5px;
-    text-shadow:0 0 20px rgba(255,255,255,0.3);
-}
-}
-
-.hero p{
-    margin:20px 0;
-    font-size:1.2rem;
-}
-
-button{
-    padding:15px 35px;
-    border:none;
-    border-radius:30px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-button:hover{
-    transform:scale(1.1);
-    box-shadow:0 0 20px rgba(255,255,255,0.4);
-}
-
 }
 
 @keyframes zoom{
@@ -121,11 +55,86 @@ button:hover{
         visibility:hidden;
     }
 }
-/* Products Section */
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 50px;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1542291026-7eec264c27ff');
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:5rem;
+    letter-spacing:5px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:1.2rem;
+}
+
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 20px rgba(255,255,255,.4);
+}
+
+/* PRODUCTS */
+
 .products{
     padding:100px 50px;
-    text-align:center;
     background:#111;
+    text-align:center;
 }
 
 .products h2{
@@ -136,28 +145,34 @@ button:hover{
 .cards{
     display:flex;
     justify-content:center;
-    gap:30px;
     flex-wrap:wrap;
+    gap:30px;
 }
 
-.card{
+.card,
+.samba-card{
     width:300px;
-    padding:40px;
     background:#1a1a1a;
+    padding:30px;
     border-radius:20px;
-    transition:0.4s;
-    backdrop-filter: blur(10px);
-border:1px solid rgba(255,255,255,0.1);
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
+    transition:.4s;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
 }
 
-.card:hover{
+.card:hover,
+.samba-card:hover{
     transform:translateY(-10px) scale(1.05);
 }
 
-.card h3{
-    margin-bottom:15px;
+.samba-img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:20px;
 }
+
+/* ABOUT */
+
 .about{
     padding:100px 30px;
     text-align:center;
@@ -172,58 +187,12 @@ box-shadow:0 10px 30px rgba(0,0,0,0.5);
 .about p{
     max-width:700px;
     margin:auto;
-    font-size:1.1rem;
-    line-height:1.8;
     color:#ccc;
-}
-footer{
-    background:#111;
-    padding:50px;
-    text-align:center;
+    line-height:1.8;
 }
 
-footer h3{
-    font-size:2rem;
-    margin-bottom:10px;
-}
+/* CONTACT */
 
-footer p{
-    color:#999;
-    margin:10px 0;
-    .popup{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.8);
-    justify-content:center;
-    align-items:center;
-    z-index:10000;
-}
-
-.popup-content{
-    background:#111;
-    padding:40px;
-    border-radius:20px;
-    text-align:center;
-    animation:pop 0.4s ease;
-}
-
-.popup-content button{
-    margin-top:20px;
-    padding:10px 20px;
-}
-
-@keyframes pop{
-    from{
-        transform:scale(0.5);
-        opacity:0;
-    }
-    to{
-        transform:scale(1);
-        opacity:1;
 .contact{
     padding:100px 30px;
     text-align:center;
@@ -236,31 +205,29 @@ footer p{
 }
 
 .contact p{
-    font-size:1.1rem;
-    margin:10px 0;
+    margin:10px;
     color:#ccc;
-}        
-  /* SAMBA CARD */
+}
 
-.samba-card{
-    width:300px;
-    margin:auto;
+/* FOOTER */
+
+footer{
+    background:#000;
+    padding:50px;
     text-align:center;
-    cursor:pointer;
-    transition:0.3s;
 }
 
-.samba-card:hover{
-    transform:scale(1.05);
+footer h3{
+    font-size:2rem;
+    margin-bottom:15px;
 }
 
-.samba-img{
-    width:100%;
-    border-radius:15px;
+footer p{
+    color:#999;
+    margin:10px 0;
 }
 
-
-/* FULL SCREEN ANIMATION */
+/* SHOE ANIMATION */
 
 .drop-screen{
     position:fixed;
@@ -273,20 +240,14 @@ footer p{
     justify-content:center;
     align-items:flex-end;
     overflow:hidden;
-    z-index:9999;
+    z-index:10000;
 }
-
-
-/* FALLING SHOE */
 
 .falling-shoe{
     position:absolute;
-    width:280px;
+    width:300px;
     top:-500px;
 }
-
-
-/* WATER SPLASH */
 
 .splash{
     position:absolute;
@@ -298,11 +259,7 @@ footer p{
     transform:scale(0);
 }
 
-
-/* SHOE DROP */
-
 @keyframes fall{
-
     0%{
         top:-500px;
         transform:rotate(0deg);
@@ -310,20 +267,16 @@ footer p{
 
     70%{
         top:45%;
-        transform:rotate(25deg);
+        transform:rotate(20deg);
     }
 
     100%{
         top:42%;
-        transform:rotate(15deg);
+        transform:rotate(10deg);
     }
 }
 
-
-/* SPLASH */
-
 @keyframes splashEffect{
-
     0%{
         transform:scale(0);
         opacity:1;
@@ -333,8 +286,4 @@ footer p{
         transform:scale(3);
         opacity:0;
     }
-}      
-        
-    }
-}
 }
