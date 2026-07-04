@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 html{
@@ -19,8 +19,6 @@ body{
 
 .intro{
     position:fixed;
-    top:0;
-    left:0;
     width:100%;
     height:100vh;
     background:#000;
@@ -35,13 +33,13 @@ body{
 .intro h1{
     font-size:6rem;
     letter-spacing:15px;
-    animation:zoom 2s ease;
+    animation:zoom 2s;
 }
 
 @keyframes zoom{
     from{
         opacity:0;
-        transform:scale(0.5);
+        transform:scale(.5);
     }
     to{
         opacity:1;
@@ -60,13 +58,11 @@ body{
 
 nav{
     position:fixed;
-    top:0;
     width:100%;
+    padding:25px 50px;
     display:flex;
     justify-content:space-between;
-    align-items:center;
-    padding:25px 50px;
-    background:rgba(0,0,0,0.4);
+    background:rgba(0,0,0,.4);
     backdrop-filter:blur(10px);
     z-index:1000;
 }
@@ -81,11 +77,11 @@ nav ul{
     list-style:none;
 }
 
-nav ul li{
+nav li{
     margin-left:30px;
 }
 
-nav ul li a{
+nav a{
     color:white;
     text-decoration:none;
 }
@@ -98,22 +94,19 @@ nav ul li a{
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    text-align:center;
     background:
-    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
     url('https://images.unsplash.com/photo-1542291026-7eec264c27ff');
     background-size:cover;
-    background-position:center;
+    text-align:center;
 }
 
 .hero h1{
     font-size:5rem;
-    letter-spacing:5px;
 }
 
 .hero p{
-    margin:20px 0;
-    font-size:1.2rem;
+    margin:20px;
 }
 
 button{
@@ -121,12 +114,6 @@ button{
     border:none;
     border-radius:30px;
     cursor:pointer;
-    transition:.3s;
-}
-
-button:hover{
-    transform:scale(1.1);
-    box-shadow:0 0 20px rgba(255,255,255,.4);
 }
 
 /* PRODUCTS */
@@ -145,24 +132,19 @@ button:hover{
 .cards{
     display:flex;
     justify-content:center;
-    flex-wrap:wrap;
-    gap:30px;
 }
 
-.card,
 .samba-card{
-    width:300px;
+    width:320px;
     background:#1a1a1a;
     padding:30px;
     border-radius:20px;
-    transition:.4s;
     cursor:pointer;
-    box-shadow:0 10px 30px rgba(0,0,0,.5);
+    transition:.3s;
 }
 
-.card:hover,
 .samba-card:hover{
-    transform:translateY(-10px) scale(1.05);
+    transform:translateY(-10px);
 }
 
 .samba-img{
@@ -171,63 +153,18 @@ button:hover{
     margin-bottom:20px;
 }
 
-/* ABOUT */
-
-.about{
+.about,
+.contact,
+footer{
     padding:100px 30px;
     text-align:center;
-    background:#000;
 }
-
-.about h2{
-    font-size:3rem;
-    margin-bottom:20px;
-}
-
-.about p{
-    max-width:700px;
-    margin:auto;
-    color:#ccc;
-    line-height:1.8;
-}
-
-/* CONTACT */
 
 .contact{
-    padding:100px 30px;
-    text-align:center;
     background:#111;
 }
 
-.contact h2{
-    font-size:3rem;
-    margin-bottom:20px;
-}
-
-.contact p{
-    margin:10px;
-    color:#ccc;
-}
-
-/* FOOTER */
-
-footer{
-    background:#000;
-    padding:50px;
-    text-align:center;
-}
-
-footer h3{
-    font-size:2rem;
-    margin-bottom:15px;
-}
-
-footer p{
-    color:#999;
-    margin:10px 0;
-}
-
-/* SHOE ANIMATION */
+/* ANIMATION SCREEN */
 
 .drop-screen{
     position:fixed;
@@ -237,188 +174,90 @@ footer p{
     height:100%;
     background:black;
     display:none;
-    justify-content:center;
-    align-items:flex-end;
     overflow:hidden;
     z-index:10000;
 }
 
-.falling-shoe{
-    position:absolute;
-    width:300px;
-    top:-500px;
-}
-
-.splash{
-    position:absolute;
-    bottom:120px;
-    width:250px;
-    height:60px;
-    border-radius:50%;
-    background:rgba(255,255,255,0.25);
-    transform:scale(0);
-}
-
-@keyframes fall{
-    0%{
-        top:-500px;
-        transform:rotate(0deg);
-    }
-
-    70%{
-        top:45%;
-        transform:rotate(20deg);
-    }
-
-    100%{
-        top:42%;
-        transform:rotate(10deg);
-    }
-}
-
-@keyframes splashEffect{
-    0%{
-        transform:scale(0);
-        opacity:1;
-    }
-
-    100%{
-        transform:scale(3);
-        opacity:0;
-  
-    }
-    /* =========================
-   STORA ADVANCED ANIMATION
-   ========================= */
-
-.drop-screen{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:black;
-    display:none;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-    z-index:10000;
-}
+/* SHOE */
 
 .falling-shoe{
     position:absolute;
     width:320px;
-    top:-500px;
     left:50%;
+    top:-500px;
     transform:translateX(-50%);
     transform-origin:bottom center;
 }
 
+/* SPLASH */
+
 .splash{
     position:absolute;
-    bottom:150px;
+    left:50%;
+    bottom:140px;
+    transform:translateX(-50%) scale(0);
     width:250px;
     height:60px;
     border-radius:50%;
-    background:rgba(255,255,255,0.25);
-    transform:scale(0);
+    background:rgba(255,255,255,.2);
 }
 
-/* SHOE FALL */
+/* BUTTON */
+
+#buyBtn{
+    position:absolute;
+    left:50%;
+    bottom:70px;
+    transform:translateX(-50%);
+    padding:18px 45px;
+    border:none;
+    border-radius:50px;
+    background:#111;
+    color:white;
+    font-size:18px;
+    letter-spacing:3px;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(255,255,255,.15);
+}
+
+#buyBtn:hover{
+    box-shadow:0 0 35px rgba(255,255,255,.4);
+}
+
+/* FALL */
 
 @keyframes fall{
 
     0%{
         top:-500px;
-        transform:rotate(0deg);
-    }
-
-    70%{
-        top:42%;
-        transform:rotate(20deg);
+        transform:
+        translateX(-50%)
+        rotate(0deg);
     }
 
     100%{
         top:40%;
-        transform:rotate(10deg);
+        transform:
+        translateX(-50%)
+        rotate(10deg);
     }
 }
 
-/* WATER SPLASH */
+/* SPLASH */
 
-@keyframes splashEffect{
+@keyframes splash{
 
     0%{
-        transform:scale(0);
+        transform:
+        translateX(-50%)
+        scale(0);
         opacity:1;
     }
 
     100%{
-        transform:scale(3);
+        transform:
+        translateX(-50%)
+        scale(3);
         opacity:0;
     }
-}
-
-/* DOUBLE TAP */
-
-@keyframes tap{
-
-    0%{
-        transform:rotate(10deg);
-    }
-
-    50%{
-        transform:rotate(35deg);
-    }
-
-    100%{
-        transform:rotate(10deg);
-    }
-}
-
-/* LEFT SLIDE */
-
-@keyframes slideLeft{
-
-    from{
-        left:40%;
-    }
-
-    to{
-        left:-400px;
-    }
-}
-
-/* RETURN FROM RIGHT */
-
-@keyframes returnRight{
-
-    from{
-        left:120%;
-    }
-
-    to{
-        left:40%;
-    }
-}
-
-/* BUY NOW BUTTON */
-
-#buyBtn{
-    position:absolute;
-    bottom:70px;
-    padding:15px 40px;
-    border:none;
-    border-radius:40px;
-    font-size:20px;
-    cursor:pointer;
-    background:white;
-    color:black;
-    transition:0.3s;
-}
-
-#buyBtn:hover{
-    transform:scale(1.1);
-    box-shadow:0 0 25px white;
-}
 }
