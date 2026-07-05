@@ -261,3 +261,42 @@ footer{
         opacity:0;
     }
 }
+#backBtn{
+
+    position:absolute;
+
+    top:40px;
+
+    left:40px;
+
+    padding:12px 30px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#111;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    letter-spacing:2px;
+
+    box-shadow:
+        0 0 15px
+        rgba(255,255,255,.15);
+
+    transition:.3s;
+}
+
+#backBtn:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+        0 0 25px
+        rgba(255,255,255,.4);
+}
