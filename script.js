@@ -3,7 +3,8 @@
 // =====================
 
 window.onload = function () {
-    document.documentElement.style.scrollBehavior = "smooth";
+    document.documentElement.style.scrollBehavior =
+        "smooth";
 };
 
 function dropShoe() {
@@ -23,19 +24,31 @@ function dropShoe() {
             ".splash"
         );
 
-    // Show animation screen
-    screen.style.display = "block";
+    // SHOW SCREEN
 
-    // Remove old button
-    const oldBtn =
+    screen.style.display =
+        "block";
+
+    // REMOVE OLD BUTTONS
+
+    const oldBuy =
         document.getElementById(
             "buyBtn"
         );
 
-    if (oldBtn)
-        oldBtn.remove();
+    const oldBack =
+        document.getElementById(
+            "backBtn"
+        );
 
-    // Reset everything
+    if (oldBuy)
+        oldBuy.remove();
+
+    if (oldBack)
+        oldBack.remove();
+
+    // RESET
+
     shoe.style.transition =
         "none";
 
@@ -59,16 +72,16 @@ function dropShoe() {
 
     void shoe.offsetWidth;
 
-    // ==================
+    // =====================
     // FALL
-    // ==================
+    // =====================
 
     shoe.style.animation =
         "fall 2s forwards";
 
-    // ==================
+    // =====================
     // SPLASH
-    // ==================
+    // =====================
 
     setTimeout(() => {
 
@@ -77,9 +90,9 @@ function dropShoe() {
 
     }, 1500);
 
-    // ==================
+    // =====================
     // TAP 1
-    // ==================
+    // =====================
 
     setTimeout(() => {
 
@@ -91,9 +104,9 @@ function dropShoe() {
 
     }, 2200);
 
-    // ==================
+    // =====================
     // TAP 2
-    // ==================
+    // =====================
 
     setTimeout(() => {
 
@@ -116,9 +129,9 @@ function dropShoe() {
 
     }, 2800);
 
-    // ==================
+    // =====================
     // SLIDE LEFT
-    // ==================
+    // =====================
 
     setTimeout(() => {
 
@@ -130,9 +143,9 @@ function dropShoe() {
 
     }, 3400);
 
-    // ==================
-    // RETURN RIGHT
-    // ==================
+    // =====================
+    // RETURN FROM RIGHT
+    // =====================
 
     setTimeout(() => {
 
@@ -152,101 +165,87 @@ function dropShoe() {
 
     }, 4700);
 
-    // ==================
-    // SHOW BUTTON
-    // ==================
+    // =====================
+    // BUTTONS
+    // =====================
 
     setTimeout(() => {
 
-        const btn =
+        // BUY BUTTON
+
+        const buy =
             document.createElement(
                 "button"
             );
 
-        btn.id =
+        buy.id =
             "buyBtn";
 
-        btn.innerHTML =
+        buy.innerHTML =
             "EXPLORE COLLECTION";
 
         screen.appendChild(
-            btn
+            buy
+        );
+
+        // BACK BUTTON
+
+        const back =
+            document.createElement(
+                "button"
+            );
+
+        back.id =
+            "backBtn";
+
+        back.innerHTML =
+            "← BACK";
+
+        back.style.position =
+            "absolute";
+
+        back.style.top =
+            "30px";
+
+        back.style.left =
+            "30px";
+
+        back.style.padding =
+            "12px 25px";
+
+        back.style.border =
+            "none";
+
+        back.style.borderRadius =
+            "30px";
+
+        back.style.background =
+            "#111";
+
+        back.style.color =
+            "white";
+
+        back.style.cursor =
+            "pointer";
+
+        back.style.fontSize =
+            "16px";
+
+        back.onclick =
+            function () {
+
+                screen.style.display =
+                    "none";
+
+                buy.remove();
+
+                back.remove();
+            };
+
+        screen.appendChild(
+            back
         );
 
     }, 6000);
+
 }
-// ==================
-// CLOSE BUTTON
-// ==================
-
-setTimeout(() => {
-
-    const closeBtn =
-        document.createElement("button");
-
-    closeBtn.innerHTML = "BACK";
-
-    closeBtn.id = "backBtn";
-
-    closeBtn.onclick = function () {
-
-        screen.style.display = "none";
-
-        const old =
-            document.getElementById(
-                "buyBtn"
-            );
-
-        if(old) old.remove();
-
-        closeBtn.remove();
-    };
-
-    screen.appendChild(closeBtn);
-
-}, 6000);
-// ==================
-// BACK BUTTON
-// ==================
-
-setTimeout(() => {
-
-    const oldBack =
-        document.getElementById("backBtn");
-
-    if(oldBack)
-        oldBack.remove();
-
-    const back =
-        document.createElement("button");
-
-    back.id = "backBtn";
-
-    back.innerHTML = "← BACK";
-
-    back.style.position = "absolute";
-    back.style.top = "30px";
-    back.style.left = "30px";
-    back.style.padding = "12px 25px";
-    back.style.border = "none";
-    back.style.borderRadius = "30px";
-    back.style.background = "#111";
-    back.style.color = "white";
-    back.style.cursor = "pointer";
-
-    back.onclick = function () {
-
-        screen.style.display = "none";
-
-        const buy =
-            document.getElementById("buyBtn");
-
-        if(buy)
-            buy.remove();
-
-        back.remove();
-    };
-
-    screen.appendChild(back);
-
-}, 6000);
