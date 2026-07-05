@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ADIDAS SAMBA | STORA</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -19,51 +15,43 @@
 
 body{
     background:#000;
-    color:white;
+    color:#fff;
 }
 
-/* NAVBAR */
-
 nav{
-    padding:25px 40px;
     background:#111;
+    padding:25px;
     display:flex;
     justify-content:space-between;
-    align-items:center;
 }
 
 .logo{
-    font-size:2rem;
+    font-size:32px;
     font-weight:bold;
 }
 
-.back{
+nav a{
     color:white;
     text-decoration:none;
 }
 
-/* PRODUCT */
-
 .container{
-    max-width:1300px;
+    max-width:1200px;
     margin:auto;
-    padding:50px 30px;
+    padding:50px 20px;
     display:flex;
     flex-wrap:wrap;
     gap:50px;
 }
-
-/* LEFT */
 
 .gallery{
     flex:1;
 }
 
 .main-img{
-    width:100%;
-    border-radius:20px;
     background:#111;
     padding:20px;
+    border-radius:20px;
 }
 
 .main-img img{
@@ -71,75 +59,45 @@ nav{
 }
 
 .thumbs{
-    display:flex;
-    gap:15px;
     margin-top:20px;
+    display:flex;
+    gap:10px;
 }
 
 .thumbs img{
-    width:90px;
-    border-radius:10px;
+    width:80px;
     cursor:pointer;
-    border:2px solid #222;
+    border-radius:10px;
 }
-
-/* RIGHT */
 
 .info{
     flex:1;
 }
 
 .info h1{
-    font-size:3rem;
+    font-size:48px;
 }
 
 .price{
-    font-size:2rem;
-    margin:25px 0;
-    color:#fff;
+    font-size:36px;
+    margin:20px 0;
 }
 
 .stock{
     color:#00ff66;
     font-size:20px;
-    margin-bottom:10px;
 }
 
 .warning{
     color:#ff4444;
     font-weight:bold;
-    margin-bottom:20px;
-}
-
-.colors{
-    margin:30px 0;
-}
-
-.color{
-    width:35px;
-    height:35px;
-    border-radius:50%;
-    display:inline-block;
-    margin-right:15px;
-    border:2px solid white;
-}
-
-.green{
-    background:green;
-}
-
-.brown{
-    background:brown;
-}
-
-.black{
-    background:black;
+    margin:20px 0;
 }
 
 .bio{
-    color:#ccc;
-    line-height:1.8;
     margin:30px 0;
+    color:#ccc;
+    line-height:1.7;
 }
 
 .buy{
@@ -149,145 +107,77 @@ nav{
     font-size:18px;
     cursor:pointer;
 }
-
-.buy:hover{
-    transform:scale(1.05);
-}
-
 </style>
 </head>
 
 <body>
 
 <nav>
-
-<div class="logo">
-STORA
-</div>
-
-<a href="index.html"
-   class="back">
-
-← Back to Store
-
-</a>
-
+    <div class="logo">STORA</div>
+    <a href="index.html">← Back</a>
 </nav>
 
 <div class="container">
 
-<!-- LEFT -->
+    <div class="gallery">
 
-<div class="gallery">
+        <div class="main-img">
+            <img
+            id="mainImage"
+            src="ChatGPT Image Jul 4, 2026 at 06_11_16 PM.png">
+        </div>
 
-<div class="main-img">
+        <div class="thumbs">
+            <img src="ChatGPT Image Jul 4, 2026 at 06_11_16 PM.png">
+            <img src="ChatGPT Image Jul 4, 2026 at 06_11_16 PM.png">
+            <img src="ChatGPT Image Jul 4, 2026 at 06_11_16 PM.png">
+            <img src="ChatGPT Image Jul 4, 2026 at 06_11_16 PM.png">
+        </div>
 
-<img
-src="ChatGPT Image Jul 4, 2026 at 06_11_16 PM.png"
-id="mainImage">
+    </div>
 
-</div>
+    <div class="info">
 
-<div class="thumbs">
+        <h1>ADIDAS SAMBA</h1>
 
-<img
-src="ChatGPT Image Jul 4, 2026 at 06_11_16 PM.png"
-onclick="change(this)">
+        <div class="price">
+            Rs. 3,999
+        </div>
 
-<img
-src="ChatGPT Image Jul 4, 2026 at 06_11_16 PM.png"
-onclick="change(this)">
+        <div class="stock">
+            🟢 AVAILABLE
+        </div>
 
-<img
-src="ChatGPT Image Jul 4, 2026 at 06_11_16 PM.png"
-onclick="change(this)">
+        <div class="warning">
+            ⚠️ ONLY 5 LEFT IN STOCK
+        </div>
 
-<img
-src="ChatGPT Image Jul 4, 2026 at 06_11_16 PM.png"
-onclick="change(this)">
+        <p>
+            🔥 27 people viewed this item today
+        </p>
 
-</div>
+        <br>
 
-</div>
+        <h3>Colors</h3>
 
-<!-- RIGHT -->
+        <p>
+            🟢 Green |
+            🟤 Brown |
+            ⚫ Black
+        </p>
 
-<div class="info">
+        <div class="bio">
+            The Adidas Samba is one of the most iconic sneakers ever made.
+            Built with premium materials, timeless design and exceptional comfort.
+        </div>
 
-<h1>
-ADIDAS SAMBA
-</h1>
+        <button class="buy">
+            BUY NOW
+        </button>
 
-<div class="price">
-
-Rs. 3,999
-
-</div>
-
-<div class="stock">
-
-🟢 AVAILABLE
-
-</div>
-
-<div class="warning">
-
-⚠️ ONLY 5 LEFT IN STOCK
-
-</div>
-
-<p>
-🔥 27 people viewed
-this item today
-</p>
-
-<div class="colors">
-
-<h3>Colors</h3>
-
-<br>
-
-<span class="color green"></span>
-
-<span class="color brown"></span>
-
-<span class="color black"></span>
+    </div>
 
 </div>
-
-<div class="bio">
-
-The Adidas Samba is one of the
-most iconic sneakers ever made.
-Built with premium materials,
-timeless design and exceptional
-comfort, it delivers both
-streetwear style and daily
-performance.
-
-</div>
-
-<button class="buy">
-
-BUY NOW
-
-</button>
-
-</div>
-
-</div>
-
-<script>
-
-function change(img){
-
-document.getElementById(
-"mainImage"
-).src = img.src;
-
-}
-
-</script>
 
 </body>
 </html>
