@@ -175,3 +175,33 @@ function dropShoe() {
 
     }, 6000);
 }
+// ==================
+// CLOSE BUTTON
+// ==================
+
+setTimeout(() => {
+
+    const closeBtn =
+        document.createElement("button");
+
+    closeBtn.innerHTML = "BACK";
+
+    closeBtn.id = "backBtn";
+
+    closeBtn.onclick = function () {
+
+        screen.style.display = "none";
+
+        const old =
+            document.getElementById(
+                "buyBtn"
+            );
+
+        if(old) old.remove();
+
+        closeBtn.remove();
+    };
+
+    screen.appendChild(closeBtn);
+
+}, 6000);
