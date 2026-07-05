@@ -3,8 +3,7 @@
 // =====================
 
 window.onload = function () {
-    document.documentElement.style.scrollBehavior =
-        "smooth";
+    document.documentElement.style.scrollBehavior = "smooth";
 };
 
 function dropShoe() {
@@ -25,12 +24,9 @@ function dropShoe() {
         );
 
     // SHOW SCREEN
-
-    screen.style.display =
-        "block";
+    screen.style.display = "block";
 
     // REMOVE OLD BUTTONS
-
     const oldBuy =
         document.getElementById(
             "buyBtn"
@@ -48,7 +44,6 @@ function dropShoe() {
         oldBack.remove();
 
     // RESET
-
     shoe.style.transition =
         "none";
 
@@ -68,31 +63,31 @@ function dropShoe() {
         "translateX(-50%) rotate(0deg)";
 
     splash.style.transform =
-        "translateX(-50%) scale(0)";
+        "scale(0)";
 
     void shoe.offsetWidth;
 
-    // =====================
+    // ==================
     // FALL
-    // =====================
+    // ==================
 
     shoe.style.animation =
         "fall 2s forwards";
 
-    // =====================
+    // ==================
     // SPLASH
-    // =====================
+    // ==================
 
     setTimeout(() => {
 
         splash.style.animation =
-            "splash .7s forwards";
+            "splashEffect .7s forwards";
 
     }, 1500);
 
-    // =====================
+    // ==================
     // TAP 1
-    // =====================
+    // ==================
 
     setTimeout(() => {
 
@@ -104,9 +99,9 @@ function dropShoe() {
 
     }, 2200);
 
-    // =====================
+    // ==================
     // TAP 2
-    // =====================
+    // ==================
 
     setTimeout(() => {
 
@@ -129,9 +124,9 @@ function dropShoe() {
 
     }, 2800);
 
-    // =====================
-    // SLIDE LEFT
-    // =====================
+    // ==================
+    // LEFT SLIDE
+    // ==================
 
     setTimeout(() => {
 
@@ -143,9 +138,9 @@ function dropShoe() {
 
     }, 3400);
 
-    // =====================
-    // RETURN FROM RIGHT
-    // =====================
+    // ==================
+    // COME BACK
+    // ==================
 
     setTimeout(() => {
 
@@ -165,13 +160,13 @@ function dropShoe() {
 
     }, 4700);
 
-    // =====================
+    // ==================
     // BUTTONS
-    // =====================
+    // ==================
 
     setTimeout(() => {
 
-        // BUY BUTTON
+        // EXPLORE BUTTON
 
         const buy =
             document.createElement(
@@ -183,12 +178,49 @@ function dropShoe() {
 
         buy.innerHTML =
             "EXPLORE COLLECTION";
-        buy.onclick = function(){
 
-    window.location.href =
-        "product.html";
+        buy.style.position =
+            "absolute";
 
-};
+        buy.style.bottom =
+            "70px";
+
+        buy.style.left =
+            "50%";
+
+        buy.style.transform =
+            "translateX(-50%)";
+
+        buy.style.padding =
+            "15px 40px";
+
+        buy.style.border =
+            "none";
+
+        buy.style.borderRadius =
+            "40px";
+
+        buy.style.fontSize =
+            "18px";
+
+        buy.style.cursor =
+            "pointer";
+
+        buy.style.background =
+            "white";
+
+        buy.style.color =
+            "black";
+
+        // PRODUCT PAGE OPEN
+
+        buy.onclick =
+            function () {
+
+                window.location.href =
+                    "product.html";
+
+            };
 
         screen.appendChild(
             buy
@@ -246,6 +278,7 @@ function dropShoe() {
                 buy.remove();
 
                 back.remove();
+
             };
 
         screen.appendChild(
