@@ -183,6 +183,12 @@ function dropShoe() {
 
         buy.innerHTML =
             "EXPLORE COLLECTION";
+        buy.onclick = function(){
+
+    window.location.href =
+        "product.html";
+
+};
 
         screen.appendChild(
             buy
