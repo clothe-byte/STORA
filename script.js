@@ -140,3 +140,70 @@ function dropShoe() {
 
     }, 6200);
 }
+function showExplore(){
+
+    const screen =
+        document.getElementById(
+            "exploreScreen"
+        );
+
+    screen.style.display =
+        "block";
+
+    setTimeout(() => {
+
+        document.querySelector(
+            ".left"
+        ).style.left = "0";
+
+        document.querySelector(
+            ".right"
+        ).style.right = "0";
+
+    },100);
+
+    setTimeout(() => {
+
+        document.querySelector(
+            ".explore-box"
+        ).style.opacity = "1";
+
+    },1000);
+}
+
+function closeExplore(){
+
+    document.getElementById(
+        "exploreScreen"
+    ).style.display = "none";
+
+    document.querySelector(
+        ".left"
+    ).style.left = "-50%";
+
+    document.querySelector(
+        ".right"
+    ).style.right = "-50%";
+
+    document.querySelector(
+        ".explore-box"
+    ).style.opacity = "0";
+}
+
+function openShoes(){
+
+    document.getElementById(
+        "products"
+    ).scrollIntoView({
+        behavior:"smooth"
+    });
+
+    closeExplore();
+}
+
+function openWatches(){
+
+    alert(
+        "⌚ Watches Collection Coming Soon"
+    );
+}
