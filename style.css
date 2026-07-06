@@ -29,12 +29,12 @@ body{
     animation:fadeOut 2s forwards;
     animation-delay:2s;
 }
-
 .intro h1{
     font-size:6rem;
     letter-spacing:15px;
     animation:zoom 2s;
 }
+
 
 @keyframes zoom{
     from{
