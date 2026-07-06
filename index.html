@@ -1,38 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
 <title>STORA</title>
-<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+      href="style.css">
+
 </head>
 
 <body>
 
+<!-- INTRO -->
+
 <div class="intro">
-    <h1>STORA</h1>
+
+    <h1>
+        STORA
+    </h1>
+
 </div>
 
+<!-- NAVBAR -->
+
 <nav>
-    <div class="logo">STORA</div>
+
+    <div class="logo">
+        STORA
+    </div>
 
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#products">Shoes</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+        <li>
+            <a href="#">
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="#products">
+                Shoes
+            </a>
+        </li>
+
+        <li>
+            <a href="#contact">
+                Contact
+            </a>
+        </li>
+
     </ul>
+
 </nav>
 
+<!-- HERO -->
+
 <section class="hero">
-    <h1>MOVE WITH STYLE</h1>
-    <p>Premium Shoes & Watches</p>
-    <button>Explore Now</button>
+
+    <h1>
+        MOVE WITH STYLE
+    </h1>
+
+    <p>
+        Premium Shoes & Watches
+    </p>
+
+    <button
+        onclick="showExplore()">
+
+        Explore Now
+
+    </button>
+
 </section>
+
 <!-- EXPLORE SCREEN -->
 
 <div id="exploreScreen">
 
     <div class="curtain left"></div>
+
     <div class="curtain right"></div>
 
     <div class="explore-box">
@@ -43,23 +94,43 @@
 
         <div class="options">
 
+            <!-- SHOES -->
+
             <div
                 class="option"
                 onclick="openShoes()">
 
-                👟
-                <br>
-                SHOES
+                <div style="font-size:60px;">
+                    👟
+                </div>
+
+                <h2>
+                    SHOES
+                </h2>
+
+                <p>
+                    Premium Sneaker Collection
+                </p>
 
             </div>
+
+            <!-- WATCHES -->
 
             <div
                 class="option"
                 onclick="openWatches()">
 
-                ⌚
-                <br>
-                WATCHES
+                <div style="font-size:60px;">
+                    ⌚
+                </div>
+
+                <h2>
+                    WATCHES
+                </h2>
+
+                <p>
+                    Luxury Collection
+                </p>
 
             </div>
 
@@ -76,22 +147,34 @@
     </div>
 
 </div>
-<section class="products" id="products">
 
-    <h2>Premium Shoes</h2>
+<!-- SHOES -->
+
+<section
+    class="products"
+    id="products">
+
+    <h2>
+        Premium Shoes
+    </h2>
 
     <div class="cards">
 
-        <div class="samba-card"
-             onclick="dropShoe()">
+        <div
+            class="samba-card"
+            onclick="dropShoe()">
 
             <img
                 src="ChatGPT Image Jul 4, 2026 at 06_11_16 PM.png"
                 class="samba-img">
 
-            <h3>ADIDAS SAMBA</h3>
+            <h3>
+                ADIDAS SAMBA
+            </h3>
 
-            <p>Click to Experience</p>
+            <p>
+                Click to Experience
+            </p>
 
         </div>
 
@@ -99,9 +182,13 @@
 
 </section>
 
+<!-- ABOUT -->
+
 <section class="about">
 
-    <h2>About STORA</h2>
+    <h2>
+        About STORA
+    </h2>
 
     <p>
         STORA is a premium luxury
@@ -109,40 +196,64 @@
     </p>
 
 </section>
+
+<!-- WATCHES -->
+
 <section class="products">
 
-    <h2>Luxury Watches</h2>
+    <h2>
+        Luxury Watches
+    </h2>
 
     <div class="cards">
 
         <div class="samba-card">
 
-            <h3>⌚ COMING SOON</h3>
+            <h3>
+                ⌚ COMING SOON
+            </h3>
 
-            <p>Luxury Watch Collection</p>
+            <p>
+                Luxury Watch Collection
+            </p>
 
         </div>
 
     </div>
 
 </section>
+
+<!-- CONTACT -->
+
 <section
     class="contact"
     id="contact">
 
-    <h2>Contact</h2>
+    <h2>
+        Contact
+    </h2>
 
-    <p>support@stora.com</p>
+    <p>
+        support@stora.com
+    </p>
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
 
-    <h3>STORA</h3>
+    <h3>
+        STORA
+    </h3>
 
-    <p>© 2026</p>
+    <p>
+        © 2026
+    </p>
 
 </footer>
+
+<!-- SHOE ANIMATION -->
 
 <div
     id="dropScreen"
