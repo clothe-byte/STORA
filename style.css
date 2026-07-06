@@ -491,3 +491,12 @@ footer{
 .backExplore:hover{
     transform:scale(1.05);
 }
+@media(max-width:768px){
+
+    .intro-logo{
+
+        width:85%;
+        max-width:320px;
+    }
+
+}
